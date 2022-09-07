@@ -28,16 +28,34 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "黑马优购",
     "navigationBarBackgroundColor": "#C00000",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#FFFFFF",
+    "usingComponents": {
+      "van-button": "/wxcomponents/vant/button/index",
+      "van-card": "/wxcomponents/vant/card/index"
+    },
+    "ignoreDevUnusedFiles": false
   },
   "uniIdRouter": {},
   "subPackages": [{
-    "root": "subpkgs",
-    "name": "goods",
-    "pages": [{
-      "path": "goods_detail/goods_detail"
-    }]
-  }],
+      "root": "subpkgs",
+      "name": "goods",
+      "pages": [{
+        "path": "goods_detail/goods_detail"
+      }]
+    },
+    {
+      "root": "subpkgs",
+      "name": "goodslist",
+      "pages": [{
+        "path": "goods_list/goods_list",
+        "style": {
+          "enablePullDownRefresh": true,
+          "backgroundColor": "#eee",
+          "onReachBottomDistance": 150
+        }
+      }]
+    }
+  ],
   "tabBar": {
     "selectedColor": "#C00000",
     "list": [{
